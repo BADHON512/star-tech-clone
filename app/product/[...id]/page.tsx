@@ -128,7 +128,8 @@ const Page = (props: Props) => {
               <div className="p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-sm">
                 <h2 className="text-xl font-semibold mb-4">Specification</h2>
                 <div className="p-4 rounded">
-                  <h3 className="text-lg font-medium text-blue-800 mb-2 bg-blue-50 py-1 px-2 rounded-md">Basic Information</h3>
+                  <h3 className="text-lg font-medium text-blue-800 mb-2 bg-blue-50 py-1 px-2   rounded-md">Basic Information</h3>
+                  <br />
                   <ul className="space-y-3 text-gray-800 ">
                     <li className=''>
                       <span className="font-medium">Processor:</span> AMD Ryzen 5 3400G Processor with Radeon RX Vega 11 Graphics
