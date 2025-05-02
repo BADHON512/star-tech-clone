@@ -19,7 +19,7 @@ const Header = (props: Props) => {
                 <div className="mx-auto hidden 1300:flex text-white items-center h-full justify-between w-full">
 
                     <Link href="/">
-                    <Image height={1000} width={1000} className='w-[110px] ' src="https://res.cloudinary.com/dfng3w9jm/image/upload/v1746131141/logo_h8rh1m.webp" alt="" /></Link>
+                        <Image height={1000} width={1000} className='w-[110px] ' src="https://res.cloudinary.com/dfng3w9jm/image/upload/v1746131141/logo_h8rh1m.webp" alt="" /></Link>
 
                     <div className="relative">
                         <input placeholder='Search' type="text" className='bg-white w-[581px]  text-[#272626] py-2 px-3 rounded-sm outline-none' />

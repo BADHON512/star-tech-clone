@@ -1,38 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-
   --breakpoint-1300: 1300px;
-  
 }
 
-body{
-    background-color: #F2F4F8;
-    
+body {
+  background-color: #f2f4f8;
 }
-
 
 .animated-div {
-    white-space: nowrap;
-    animation: badhon 30s linear infinite;
-  }
-  
-  @keyframes badhon {
-    0% {
-      transform: translateX(100%); 
-    }
-    100% {
-      transform: translateX(-100%); 
-    }
-  }
-  .animation-container {
-    overflow: inherit;
-    text-wrap: wrap;
-    position: relative;
-    overflow-x: hidden;
-    
-  }
+  white-space: nowrap;
+  animation: badhon 30s linear infinite;
+}
 
-  .gradient-box {
-    background: linear-gradient(125deg, #0bc1e9, #3749bb, #00237e);
+@keyframes badhon {
+  0% {
+    transform: translateX(100%);
   }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.animation-container {
+  overflow: inherit;
+  text-wrap: wrap;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.gradient-box {
+  background: linear-gradient(125deg, #0bc1e9, #3749bb, #00237e);
+}

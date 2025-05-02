@@ -29,7 +29,7 @@ const Hero = (props: Props) => {
               Choose Two Products to Compare
             </span>
 
-            {/* Input 1 */}
+         
             <div className="relative w-full mt-3">
               <input
                 placeholder="Search and Select product"
@@ -79,42 +79,42 @@ const Hero = (props: Props) => {
         </div>
       </div>
       <div className="mt-10 grid grid-cols-2 md:grid-cols-4  gap-5">
-  {[
-    {
-      icon: <MdLaptopChromebook size={30} color="white" />,
-      title: "Laptop Finder",
-      subtitle: "Find Your Laptop Easily",
-    },
-    {
-      icon: <TbMessageReport size={30} color="white" />,
-      title: "Raise a Complain",
-      subtitle: "Share your experience",
-    },
-    {
-      icon: <AiOutlineHome size={30} color="white" />,
-      title: "Home Service",
-      subtitle: "Get Expert help.",
-    },
-    {
-      icon: <IoSettingsOutline size={30} color="white" />,
-      title: "Servicing Center",
-      subtitle: "Repair Your Device",
-    },
-  ].map((item, index) => (
-    <div
-      key={index}
-      className="flex items-center gap-x-2 md:gap-x-5 bg-white py-4 px-3 md:px-6 rounded-md"
-    >
-      <div className="w-[60px] h-[60px] rounded-full bg-red-600 flex justify-center items-center shrink-0">
-        {item.icon}
+        {[
+          {
+            icon: <MdLaptopChromebook size={30} color="white" />,
+            title: "Laptop Finder",
+            subtitle: "Find Your Laptop Easily",
+          },
+          {
+            icon: <TbMessageReport size={30} color="white" />,
+            title: "Raise a Complain",
+            subtitle: "Share your experience",
+          },
+          {
+            icon: <AiOutlineHome size={30} color="white" />,
+            title: "Home Service",
+            subtitle: "Get Expert help.",
+          },
+          {
+            icon: <IoSettingsOutline size={30} color="white" />,
+            title: "Servicing Center",
+            subtitle: "Repair Your Device",
+          },
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="flex items-center gap-x-2 md:gap-x-5 bg-white py-4 px-3 md:px-6 rounded-md"
+          >
+            <div className="w-[60px] h-[60px] rounded-full bg-red-600 flex justify-center items-center shrink-0">
+              {item.icon}
+            </div>
+            <div>
+              <h1 className="font-semibold md:font-bold md:text-[18px] text-[#141111]">{item.title}</h1>
+              <span className="text-sm text-[#444] hidden xl:block">{item.subtitle}</span>
+            </div>
+          </div>
+        ))}
       </div>
-      <div>
-        <h1 className="font-semibold md:font-bold md:text-[18px] text-[#141111]">{item.title}</h1>
-        <span className="text-sm text-[#444] hidden xl:block">{item.subtitle}</span>
-      </div>
-    </div>
-  ))}
-</div>
 
     </div>
   )

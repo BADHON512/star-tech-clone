@@ -10,7 +10,7 @@ type Props = {}
 
 const BottomNav = (props: Props) => {
     return (
-        <div className=' w-full 1300:hidden h-[60px] bg-[#081621] fixed bottom-0 left-0 flex justify-around'>
+        <div className=' w-full border-t border-[#80808060] 1300:hidden h-[60px] bg-[#081621] fixed bottom-0 left-0 flex justify-around'>
             <div className="flex justify-center items-center flex-col gap-y-0.5">
                 <GoGift size={20} className='cursor-pointer' color='white' />
                 <span className='text-[12px] text-[#838383]'>Offers</span>
@@ -26,14 +26,14 @@ const BottomNav = (props: Props) => {
                             ease: 'easeInOut',
                         }}>
                         <BsLightningCharge
-                            className="mt-2"  color='white'/>
+                            className="mt-2" color='white' />
                     </motion.div>
                 </AnimatePresence>
                 <span className='text-[12px] text-[#838383]'>Happy Hour</span>
             </div>
 
             <div className="flex justify-center items-center flex-col gap-y-0.5">
-                <BsPcDisplayHorizontal  size={20} className='cursor-pointer' color='white' />
+                <BsPcDisplayHorizontal size={20} className='cursor-pointer' color='white' />
                 <span className='text-[12px] text-[#838383]'>PC Builder</span>
             </div>
 

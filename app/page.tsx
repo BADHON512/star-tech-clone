@@ -14,13 +14,13 @@ const HomePage = (props: Props) => {
   return (
     <div>
       <Header />
-      <CategoryNav/>
-       <Hero/>
-       <FeaturedCategory/>
-        <Product/>
-         <HomeDescription/>
-         <Footer/>
-         <BottomNav/>
+      <CategoryNav />
+      <Hero />
+      <FeaturedCategory />
+      <Product />
+      <HomeDescription />
+      <Footer />
+      <BottomNav />
     </div>
   )
 }

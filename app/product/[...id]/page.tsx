@@ -1,4 +1,5 @@
 "use client"
+import BottomNav from '@/components/Layouts/ButtomNav'
 import Footer from '@/components/Layouts/Footer'
 import Header from '@/components/Layouts/Header'
 import { ProductData } from '@/productData'
@@ -12,10 +13,8 @@ const Page = (props: Props) => {
   const [product, setproduct] = useState()
   const [count, setcount] = useState(1)
   const [active, setactive] = useState(0)
-  const [selectedPayment, setSelectedPayment] = useState("full")
   const params = useParams()
   const paramId = params.id?.toString()
-
 
   useEffect(() => {
     const filterProduct = ProductData?.find((item, index) => item.id == paramId)
@@ -31,7 +30,7 @@ const Page = (props: Props) => {
 
           <div>
             < Image src={`${product?.image}`} height={1000} width={1000} alt='img not found' />
-        
+
           </div>
 
 
@@ -82,7 +81,7 @@ const Page = (props: Props) => {
                   <button onClick={(() => setcount(count + 1))} className="bg-gray-100 px-3 py-1 rounded cursor-pointer border border-[#8a8a8a3f]">+</button>
                 </div>
 
-                <button className=" bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 mt-5 rounded-md text-lg font-medium">Buy Now</button>
+                <button className=" bg-blue-600 hover:bg-blue-700 text-white py-1 px-4 mt-5 rounded-md text-lg font-medium cursor-pointer">Buy Now</button>
               </div>
             </div>
           </div>
@@ -151,6 +150,7 @@ const Page = (props: Props) => {
         </div>
 
       </div>
+      <BottomNav />
       <Footer />
     </>
   )
