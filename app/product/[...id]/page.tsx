@@ -30,7 +30,7 @@ const Page = (props: Props) => {
 
 
           <div>
-            {/* < Image src={`${product?.image}`} height={1000} width={1000} alt='img not found'/> */}
+            < Image src={`${product?.image}`} height={1000} width={1000} alt='img not found'/>
             <div className="grid grid-cols-3 gap-4 mt-4">
               {/* <img src="/thumb1.jpg" className="rounded shadow" />
           <img src="/thumb2.jpg" className="rounded shadow" />
@@ -106,7 +106,7 @@ const Page = (props: Props) => {
   <button className={`px-4 py-1 rounded font-semibold ${active === 2 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer`} onClick={() => setactive(2)}>
     Questions (0)
   </button>
-  <button className={`px-4 py-1 rounded font-semibold ${active === 3 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer`} onClick={() => setactive(3)}>
+  <button className={`px-4 py-1 rounded font-semibold ${active === 3 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer hidden md:block`} onClick={() => setactive(3)}>
     Reviews (0)
   </button>
 </div>
