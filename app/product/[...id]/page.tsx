@@ -31,11 +31,7 @@ const Page = (props: Props) => {
 
           <div>
             < Image src={`${product?.image}`} height={1000} width={1000} alt='img not found' />
-            <div className="grid grid-cols-3 gap-4 mt-4">
-              <img src={`${product?.image}`} className="rounded shadow" />
-              <img src={`${product?.image}`} className="rounded shadow" />
-              <img src={`${product?.image}`} className="rounded shadow" />
-            </div>
+        
           </div>
 
 
