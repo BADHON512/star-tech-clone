@@ -5,90 +5,39 @@ import { SlLocationPin } from 'react-icons/sl'
 type Props = {}
 
 const FeaturedCategory = (props: Props) => {
+
+    const categories = [
+        { image: "images/drone.png", name: "Drone" },
+        { image: "images/gimbal.png", name: "Gimbal" },
+        { image: "images/charger-fan.png", name: "Charger Fan" },
+        { image: "images/weight-scale.png", name: "Weight Scale" },
+        { image: "images/tv.png", name: "Tv" },
+        { image: "images/mobile-phone-.png", name: "Mobile Phone" },
+        { image: "images/mobile-phone-.png", name: "Mobile Accessories" },
+        { image: "images/portable-ssd.png", name: "Portable SSD" },
+        { image: "images/portable-ip-camer.png", name: "Portable WiFi" },
+        { image: "images/trimmer.png", name: "Trimmer" },
+        { image: "images/smart-watch.png", name: "Smart Watch" },
+        { image: "images/action-camera-.png", name: "Action Camera" },
+        { image: "images/earphone-.png", name: "Earphone" },
+        { image: "images/earbuds-.png", name: "Earbuds" },
+        { image: "images/bt-speaker-.png", name: "Bluetooth Speakers" },
+        { image: "images/gaming-console-.png", name: "Gaming Console" },
+    ];
     return (
         <div className='mt-16 1300:w-[1297px] mx-auto p-2'>
             <h1 className='text-center font-bold text-[20px] leading-[26px]'>Featured Category</h1>
             <h5 className='mt-2 text-center text-[#444]'>Get Your Desired Product from Featured Category!</h5>
-
-            <div className="w-full mt-10 flex flex-wrap gap-3 justify-center">
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/drone.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Drone</h5>
-                </div>
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/gimbal.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Gimbal</h5>
-                </div>
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/charger-fan.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Charger Fan</h5>
-                </div>
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/weight-scale.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Weight Scale</h5>
-                </div>
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/tv.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Tv</h5>
-                </div>
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/mobile-phone-.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Mobile Phone</h5>
-                </div>
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/mobile-phone-.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Mobile Accessories</h5>
-                </div>
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/portable-ssd.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Portable SSD</h5>
-                </div>
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/portable-ip-camer.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Portable WiFi</h5>
-                </div>
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/trimmer.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Trimmer</h5>
-                </div>
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/smart-watch.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Smart Watch</h5>
-                </div>
-
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/action-camera-.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Action Camera</h5>
-                </div>
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/earphone-.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Earphone</h5>
-                </div>
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/earbuds-.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Earbuds</h5>
-                </div>
-
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/bt-speaker-.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Bluetooth Speakers</h5>
-                </div>
-                <div className="h-[130px] w-[145px] flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center">
-                    <img src="images/gaming-console-.png" className='object-cover' alt="" />
-                    <h5 className='mt-2 text-red-500'>Gaming Console</h5>
-                </div>
+            <div className="w-full mt-10 grid grid-cols-4  lg:grid-cols-8 gap-4">
+                {categories.map((item, index) => (
+                    <div
+                        key={index}
+                        className="h-[130px] w-full flex-col bg-white cursor-pointer rounded-2xl flex items-center justify-center shadow-sm hover:shadow-md transition duration-300"
+                    >
+                        <img src={item.image} className="object-contain w-[40%] lg:w-auto" alt={item.name} />
+                        <h5 className="mt-2 text-gray-500 text-sm text-center">{item.name}</h5>
+                    </div>
+                ))}
             </div>
 
             {/* Find your location */}

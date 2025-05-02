@@ -7,7 +7,7 @@ type Props = {
 
 const ProductCard = ({ product }: Props) => {
   return (
-    <Link href={`/product/${product.id}`} className='w-[252px] h-[388px] rounded-md bg-white shadow-sm cursor-pointer'>
+    <Link href={`/product/${product.id}`} className=' h:[ 200px ] min-h-[310px] md:w-[252px] md:h-[388px] rounded-md bg-white shadow-sm cursor-pointer'>
       <span className='bg-[#6e2594] inline-block py-0.5 text-white text-sm mt-5 px-3 rounded-r-full shadow-2xl '>Save : 9,200 <span className='text-[14px] font-extrabold'>৳ </span>(-17%)</span>
       <img src={product.image} className='object-cover mx-auto mt-1.5 ' alt="" />
       <div className="border-t border-[#cac7c757]"></div>

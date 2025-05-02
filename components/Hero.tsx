@@ -9,8 +9,8 @@ type Props = {}
 
 const Hero = (props: Props) => {
   return (
-    <div className="mt-18 1300:mt-10 max-w-[1297px] mx-auto px-4">
-      <div className="flex flex-col lg:flex-row gap-7">
+    <div className="mt-15 1300:mt-10 max-w-[1297px] mx-auto px-4">
+      <div className="flex flex-col lg:flex-row 1300:gap-7 gap-4">
         {/* Left Banner Image */}
         <img
           src="images/banner1.webp"
@@ -19,7 +19,7 @@ const Hero = (props: Props) => {
         />
 
         {/* Right Section */}
-        <div className="flex flex-col gap-8 w-full lg:w-1/2">
+        <div className="flex flex-col gap-4 1300:gap-5 w-full lg:w-1/2">
           {/* Compare Box */}
           <div className="w-full bg-[#FEE289] flex items-center justify-center flex-col p-5 rounded-md shadow">
             <h1 className="text-center font-semibold text-lg">
@@ -81,35 +81,35 @@ const Hero = (props: Props) => {
       <div className="mt-10 grid grid-cols-2 md:grid-cols-4  gap-5">
         {[
           {
-            icon: <MdLaptopChromebook size={30} color="white" />,
+            icon: <MdLaptopChromebook className='text-[20px] lg:text-[30px]' color="white" />,
             title: "Laptop Finder",
             subtitle: "Find Your Laptop Easily",
           },
           {
-            icon: <TbMessageReport size={30} color="white" />,
+            icon: <TbMessageReport className='text-[20px] lg:text-[30px]' color="white" />,
             title: "Raise a Complain",
             subtitle: "Share your experience",
           },
           {
-            icon: <AiOutlineHome size={30} color="white" />,
+            icon: <AiOutlineHome className='text-[20px] lg:text-[30px]' color="white" />,
             title: "Home Service",
             subtitle: "Get Expert help.",
           },
           {
-            icon: <IoSettingsOutline size={30} color="white" />,
+            icon: <IoSettingsOutline className='text-[20px] lg:text-[30px]' color="white" />,
             title: "Servicing Center",
             subtitle: "Repair Your Device",
           },
         ].map((item, index) => (
           <div
             key={index}
-            className="flex items-center gap-x-2 md:gap-x-5 bg-white py-4 px-3 md:px-6 rounded-md"
+            className="flex items-center justify-center lg:justify-self-start gap-x-2 md:gap-x-5 bg-white py-4 px-3 md:px-6 rounded-md"
           >
-            <div className="w-[60px] h-[60px] rounded-full bg-red-600 flex justify-center items-center shrink-0">
+            <div className="w-[40px]  h-[40px]  lg:w-[55px] lg:h-[55px] rounded-full bg-red-600 flex justify-center items-center shrink-0">
               {item.icon}
             </div>
             <div>
-              <h1 className="font-semibold md:font-bold md:text-[18px] text-[#141111]">{item.title}</h1>
+              <h1 className="font-semibold md:font-bold text-[14px] md:text-[18px] text-[#141111]">{item.title}</h1>
               <span className="text-sm text-[#444] hidden xl:block">{item.subtitle}</span>
             </div>
           </div>

@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import { BsLightningCharge } from 'react-icons/bs'
 import { GoGift } from 'react-icons/go'
 import { AnimatePresence, motion } from 'framer-motion';
@@ -9,12 +9,32 @@ import { IoPersonSharp } from 'react-icons/io5';
 import { VscThreeBars } from 'react-icons/vsc';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RxCross1 } from 'react-icons/rx';
 type Props = {}
 
 const Header = (props: Props) => {
-
+    const [SideBar, setSideBar] = useState(false)
+    const categories = [
+        "Laptop",
+        "Component",
+        "Monitor",
+        "UPS",
+        "Phone",
+        "Tablet",
+        "Office Equipment",
+        "Camera",
+        "Security",
+        "Networking",
+        "Software",
+        "Server & Storage",
+        "Accessories",
+        "Gadget",
+        "Gaming",
+        "TV",
+        "Appliance",
+    ];
     return (
-        <div className='bg-[#081621] h-[60px] 1300:h-[81px] fixed top-0 left-0 w-full z-40 1300:static '>
+        <div className='bg-[#081621] h-[50px] 1300:h-[81px] fixed top-0 left-0 w-full z-40 1300:static '>
             <div className="w-full 1300:w-[1297px] mx-auto text-white  h-full px-5 ">
                 <div className="mx-auto hidden 1300:flex text-white items-center h-full justify-between w-full">
 
@@ -77,18 +97,46 @@ const Header = (props: Props) => {
                 {/* for small screen */}
 
                 <div className="1300:hidden flex justify-between items-center h-full">
-                    <VscThreeBars size={30} />
-                  <Link href={"/"}>  <img className='w-[110px] ' src="/images/logo.png" alt="" /></Link>
+                    {
+                        SideBar ? (<RxCross1 size={25} className='cursor-pointer' onClick={() => setSideBar(!SideBar)} />) : (<VscThreeBars size={25} className='cursor-pointer' onClick={() => setSideBar(!SideBar)} />)
+                    }
+
+                    <Link href={"/"}>  <img className='w-[80px] ' src="/images/logo.png" alt="" /></Link>
                     <div className="flex gap-x-3 items-center">
-                        <MdOutlineSearch size={30} />
+                        <MdOutlineSearch size={25} />
                         <div className="relative">
-                            <MdShoppingBasket size={30} />
+                            <MdShoppingBasket size={25} />
                             <span className='h-4 w-4 rounded-full bg-red-500 absolute flex justify-center items-center -top-2 -right-2 text-sm p-1' >0</span>
                         </div>
                     </div>
                 </div>
 
             </div>
+
+            {/* sideBar */}
+
+            <AnimatePresence>
+  {SideBar && (
+    <motion.div
+      initial={{ x: "-100%" }}
+      animate={{ x: 0 }}
+      exit={{ x: "-100%" }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="w-full max-w-[260px] bg-white shadow-md overflow-hidden 1300:hidden"
+    >
+      {categories.map((category, index) => (
+        <div
+          key={index}
+          className="flex items-center justify-between px-4 py-2 border-b border-gray-300 hover:bg-gray-100 cursor-pointer"
+        >
+          <span className="text-gray-800 text-sm ">{category}</span>
+          <span className="text-xl text-gray-500">+</span>
+        </div>
+      ))}
+    </motion.div>
+  )}
+</AnimatePresence>
+
         </div>
     )
 }

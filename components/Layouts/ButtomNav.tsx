@@ -10,7 +10,7 @@ type Props = {}
 
 const BottomNav = (props: Props) => {
     return (
-        <div className=' w-full border-t border-[#80808060] 1300:hidden h-[60px] bg-[#081621] fixed bottom-0 left-0 flex justify-around'>
+        <div className=' w-full border-t border-[#80808060] 1300:hidden h-[60px] bg-[#081621] z-50 fixed bottom-0 left-0 flex justify-around'>
             <div className="flex justify-center items-center flex-col gap-y-0.5">
                 <GoGift size={20} className='cursor-pointer' color='white' />
                 <span className='text-[12px] text-[#838383]'>Offers</span>
