@@ -3,19 +3,23 @@ import React from 'react'
 import { BsLightningCharge } from 'react-icons/bs'
 import { GoGift } from 'react-icons/go'
 import { AnimatePresence, motion } from 'framer-motion';
-import { RxAvatar } from 'react-icons/rx';
-import { MdOutlineSearch, MdPersonOutline, MdShoppingBasket } from 'react-icons/md';
+
+import { MdOutlineSearch, MdShoppingBasket } from 'react-icons/md';
 import { IoPersonSharp } from 'react-icons/io5';
 import { VscThreeBars } from 'react-icons/vsc';
+import Image from 'next/image';
+import Link from 'next/link';
 type Props = {}
 
 const Header = (props: Props) => {
+
     return (
-        <div className='bg-[#081621] h-[81px]'>
+        <div className='bg-[#081621] h-[60px] 1300:h-[81px] fixed top-0 left-0 w-full z-40 1300:static '>
             <div className="w-full 1300:w-[1297px] mx-auto text-white  h-full px-5 ">
                 <div className="mx-auto hidden 1300:flex text-white items-center h-full justify-between w-full">
 
-                    <img className='w-[110px] ' src="images/logo.png" alt="" />
+                    <Link href="/">
+                    <Image height={1000} width={1000} className='w-[110px] ' src="https://res.cloudinary.com/dfng3w9jm/image/upload/v1746131141/logo_h8rh1m.webp" alt="" /></Link>
 
                     <div className="relative">
                         <input placeholder='Search' type="text" className='bg-white w-[581px]  text-[#272626] py-2 px-3 rounded-sm outline-none' />
@@ -47,7 +51,7 @@ const Header = (props: Props) => {
 
                         <div className=" leading-[25px] cursor-pointer">
                             <h5>happy hour</h5>
-                            <p className='text-[#c5c5c5bd] text-xs'>Latest Offers</p>
+                            <p className='text-[#c5c5c5bd] text-xs'>Special Deals</p>
                         </div>
                     </div>
 
@@ -70,19 +74,19 @@ const Header = (props: Props) => {
                     </div>
                 </div>
 
-            {/* for small screen */}
+                {/* for small screen */}
 
-            <div className="1300:hidden flex justify-between items-center h-full">
-            <VscThreeBars size={30} />
-            <img className='w-[110px] ' src="images/logo.png" alt="" />
-              <div className="flex gap-x-3 items-center">
-                <MdOutlineSearch size={30} />
-             <div className="relative">
-             <MdShoppingBasket size={30} />
-             <span className='h-4 w-4 rounded-full bg-red-500 absolute flex justify-center items-center -top-2 -right-2 text-sm p-1' >0</span>
-             </div>
-              </div>
-            </div>
+                <div className="1300:hidden flex justify-between items-center h-full">
+                    <VscThreeBars size={30} />
+                    <img className='w-[110px] ' src="/images/logo.png" alt="" />
+                    <div className="flex gap-x-3 items-center">
+                        <MdOutlineSearch size={30} />
+                        <div className="relative">
+                            <MdShoppingBasket size={30} />
+                            <span className='h-4 w-4 rounded-full bg-red-500 absolute flex justify-center items-center -top-2 -right-2 text-sm p-1' >0</span>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
