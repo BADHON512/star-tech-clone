@@ -78,7 +78,7 @@ const Header = (props: Props) => {
 
                 <div className="1300:hidden flex justify-between items-center h-full">
                     <VscThreeBars size={30} />
-                    <img className='w-[110px] ' src="/images/logo.png" alt="" />
+                  <Link href={"/"}>  <img className='w-[110px] ' src="/images/logo.png" alt="" /></Link>
                     <div className="flex gap-x-3 items-center">
                         <MdOutlineSearch size={30} />
                         <div className="relative">
