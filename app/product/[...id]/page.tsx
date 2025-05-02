@@ -7,6 +7,7 @@ import { ProductData } from '@/productData'
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
+import { IoMdGitCompare } from 'react-icons/io'
 
 type Props = {}
 
@@ -26,12 +27,15 @@ const Page = (props: Props) => {
     <>
       <Header />
       <CategoryNav />
-      <div className="w-full mx-auto  bg-white mt-3">
+      <div className="w-full mx-auto  bg-white 1300:mt-3 mt-[50px]">
+
+
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 border-b border-[#80808057] pb-5 px-10 py-3 lg:px-40 lg:py-10 ">
 
 
           <div className='w-full flex items-center justify-center '>
-            < Image src={`https://res.cloudinary.com/dfng3w9jm/image/upload/v1746174908/ryzen-5-8500g-desktop-pc-00010-500x500_i012da.webp`} height={1000} width={1000} alt='img not found' className='w-[70%]' />
+            < Image src={`https://res.cloudinary.com/dfng3w9jm/image/upload/v1746174908/ryzen-5-8500g-desktop-pc-00010-500x500_i012da.webp`} height={1000} width={1000} alt='img not found' className='md:w-[60%] lg:w-[80%] xl:w-[50%] ' layout='responsiveness' />
 
           </div>
 
@@ -102,76 +106,309 @@ const Page = (props: Props) => {
         </div>
 
 
-        <div className="bg-white p-6 rounded-lg shadow-md mt-10 max-w-7xl mx-auto grid grid-cols-2 ">
-          <div className="">
-            <div className="flex space-x-4 border-b pb-3 mb-6">
-              <button className={`px-4 py-1 rounded font-semibold ${active === 0 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer`} onClick={() => setactive(0)}>
-                Specification
-              </button>
-              <button className={`px-4 py-1 rounded font-semibold ${active === 1 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer`} onClick={() => setactive(1)}>
-                Description
-              </button>
-              <button className={`px-4 py-1 rounded font-semibold ${active === 2 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer`} onClick={() => setactive(2)}>
-                Questions (0)
-              </button>
-              <button className={`px-4 py-1 rounded font-semibold ${active === 3 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer hidden md:block`} onClick={() => setactive(3)}>
-                Reviews (0)
-              </button>
+        <div className="bg-[#F2F4F8] p-6 rounded-lg shadow-md mt-10   ">
+          <div className=" 1300:w-[1297px] mx-auto gap-x-3 grid-cols-1 grid  lg:grid-cols-[70fr_25fr]">
+            <div className=" ">
+              <div className="flex space-x-4  pb-3  ">
+                <button className={`px-5 py-2 rounded font-semibold ${active === 0 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600 bg-white"} cursor-pointer`} onClick={() => setactive(0)}>
+                  Specification
+                </button>
+                <button className={`px-5 py-2rounded font-semibold ${active === 1 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600 bg-white"} cursor-pointer`} onClick={() => setactive(1)}>
+                  Description
+                </button>
+                <button className={`px-5 py-2 rounded font-semibold ${active === 2 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600 bg-white"} cursor-pointer hidden md:block`} onClick={() => setactive(2)}>
+                  Questions (0)
+                </button>
+                <button className={`px-5 py-2 rounded font-semibold   ${active === 3 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600 bg-white"} cursor-pointer hidden md:block`} onClick={() => setactive(3)}>
+                  Reviews (0)
+                </button>
+              </div>
+
+
+              <div className="p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-sm">
+                <h2 className="text-xl font-semibold mb-4">Specification</h2>
+                <div className="p-4 rounded">
+                  <h3 className="text-lg font-medium text-blue-800 mb-2 bg-blue-50 py-1 px-2 rounded-md">Basic Information</h3>
+                  <ul className="space-y-3 text-gray-800 ">
+                    <li className=''>
+                      <span className="font-medium">Processor:</span> AMD Ryzen 5 3400G Processor with Radeon RX Vega 11 Graphics
+                      <br />
+                      <span className="text-gray-600 text-sm">03 years warranty (No Warranty for Fan or Cooler)</span>
+                    </li>
+                    <li className='border-t border-[#80808057] py-2'>
+                      <span className="font-medium">Motherboard:</span> MSI A520M-A Pro AMD Micro-ATX Motherboard
+                      <br />
+                      <span className="text-gray-600 text-sm">03 Years Warranty</span>
+                    </li>
+                    <li className='border-t border-[#80808057] py-3'>
+                      <span className="font-medium">RAM:</span> Team T-CREATE CLASSIC 8GB DDR4 3200MHz Desktop RAM
+                      <br />
+                      <span className="text-gray-600 text-sm">Lifetime Warranty</span>
+                    </li>
+                    <li className='border-t border-[#80808057] py-3'>
+                      <span className="font-medium">Storage:</span> Colorful CN600 PRO 256GB M.2 NVMe SSD
+                      <br />
+                      <span className="text-gray-600 text-sm">03 Years</span>
+                    </li>
+                    <li className='border-t border-[#80808057] py-3'>
+                      <span className="font-medium">Casing:</span> MaxGreen H2 M-ATX Case With 200W Power Supply
+                      <br />
+                      <span className="text-gray-600 text-sm">No Warranty</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div className="p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-sm mt-3 md:mt-5" >
+                <h2 className="text-xl font-semibold mb-4">Description</h2>
+                <h3 className="text-lg font-medium mb-2">AMD Ryzen 5 3400G Processor Desktop PC</h3>
+                <p className="text-gray-800 mb-4">
+                  The AMD Ryzen 5 3400G Processor Desktop PC is a powerful, all-round system designed to cater to gamers, creators, and
+                  professionals alike. At its core is the AMD Ryzen 5 3400G Processor, featuring 4 cores and 8 threads with a base clock
+                  of 3.7 GHz and a boost clock of 4.2 GHz, delivering exceptional performance for multitasking and demanding
+                  applications. Integrated Radeon RX Vega 11 Graphics ensures smooth visuals for gaming and media tasks, eliminating
+                  the need for a dedicated graphics card. The MSI A520M-A Pro AMD Micro-ATX Motherboard is complementing the processor,
+                  offering seamless compatibility with AMD Ryzen processors. Its advanced features, including DDR4 Boost and PCIe 3.0
+                  support, ensure reliable and stable operation. The system has 8GB Team T-CREATE CLASSIC DDR4 3200MHz Desktop RAM
+                  clocked at 3200, providing the speed and efficiency required for lag-free multitasking. The Colorful CN600 PRO 256GB
+                  M.2 NVMe SSD delivers lightning-fast read and write speeds, ensuring quick boot times and enhanced system
+                  responsiveness. All these components are housed in the MaxGreen H2 M-ATX Case With 200W Power Supply, a compact and
+                  stylish enclosure designed with efficient airflow. The pre-installed power supply makes setup hassle-free and ensures
+                  stable power delivery. This desktop PC is an excellent choice for those looking for a system that offers exceptional
+                  performance and future-proof upgradability. From gaming and streaming to content creation and office productivity,
+                  the AMD Ryzen 5 3400G Desktop PC is built to handle it easily. Elevate your computing experience and enjoy unmatched
+                  efficiency and performance today.
+                </p>
+                <p className="text-gray-600 mb-2">For More Details Please Visit:</p>
+                <ul className=" list-inside text-red-600 space-y-2 list-none">
+                  <li>AMD Ryzen 5 3400G Processor with Radeon RX Vega 11 Graphics</li>
+                  <li>MSI A520M-A Pro AMD Micro-ATX Motherboard</li>
+                  <li>Team T-CREATE CLASSIC 8GB DDR4 3200MHz Desktop RAM</li>
+                  <li>Colorful CN600 PRO 256GB M.2 NVMe SSD</li>
+                  <li>MaxGreen H2 M-ATX Case With 200W Power Supply</li>
+                </ul>
+              </div>
+
+
+
+
+              <div className="p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-sm my-3 md:mt-5">
+
+                <div className="flex justify-between items-center mb-4 ">
+                  <h2 className="text-xl font-semibold">Reviews (4)</h2>
+                  <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition">
+                    Write a Review
+                  </button>
+                </div>
+
+                <p className="text-gray-600 mb-4">Get specific details about the product from customers who own it.</p>
+
+
+                <div className="flex items-center mb-6">
+                  <div className="flex text-yellow-400">
+                    {[...Array(4)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    ))}
+                    <svg className="w-5 h-5 text-gray-300" viewBox="0 0 24 24">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                  </div>
+                  <span className="ml-2 text-lg font-medium">4 out of 5</span>
+                </div>
+
+
+                <div className="space-y-6">
+
+                  <div>
+                    <div className="flex items-center">
+                      <div className="flex text-yellow-400">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                          </svg>
+                        ))}
+                      </div>
+                    </div>
+                    <p className="text-gray-800 mt-2">
+                      Additional 8gb ram of the same kind is HIGHLY recommended, 8gb might not be sufficient for productive use cases and that would increase ssd wear if paging file is on
+                    </p>
+                    <p className="text-gray-500 text-sm mt-1">By Safwan Ahmad on 06 Apr 2025</p>
+                  </div>
+
+
+                  <div>
+                    <div className="flex items-center">
+                      <div className="flex text-yellow-400">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                          </svg>
+                        ))}
+                      </div>
+                    </div>
+                    <p className="text-gray-800 mt-2">
+                      excellent value of money to be spent, however check if casing psu supports further upgrade (15 pin SATA cable) in terms of storage (HDD/SSD) expansion
+                    </p>
+                    <p className="text-gray-500 text-sm mt-1">By Safwan Ahmad on 23 Mar 2025</p>
+                  </div>
+
+
+                  <div>
+                    <div className="flex items-center">
+                      <div className="flex text-yellow-400">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                          </svg>
+                        ))}
+                      </div>
+                    </div>
+                    <p className="text-gray-800 mt-2">
+                      I bought the same AMD Desktop PC: 3400G, B450m a pro max ii, t creat, xoc. It gives very good performance. At this price, the thing is really worth the money.
+                    </p>
+                    <p className="text-gray-500 text-sm mt-1">By Md.Ashikur Rahman Nafiz on 17 Mar 2025</p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center">
+                      <div className="flex text-yellow-400">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                          </svg>
+                        ))}
+                      </div>
+                    </div>
+                    <p className="text-gray-800 mt-2">
+                      The built-in Radeon Vega 11 graphics is quite power full for an integrated GPU and can handle light gaming and multimedia tasks.
+                    </p>
+                    <p className="text-gray-500 text-sm mt-1">By Ashraf Fahan on 13 Jan 2025</p>
+                  </div>
+                </div>
+              </div>
+
+
+
             </div>
 
 
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Specification</h2>
 
 
-            <div className="mb-6">
-              <h3 className="text-lg font-semibold bg-blue-100 px-4 py-2 rounded-t text-blue-800">Basic Information</h3>
-              <table className="w-full text-sm text-left text-gray-700 border border-gray-200">
-                <tbody>
-                  <tr className="border-b"><td className="p-3 font-medium">Processor</td><td className="p-3">Intel Xeon E-2334 3.4GHz, 8M Cache, 4C/8T, Turbo (65W), 3200 MT/s</td></tr>
-                  <tr className="border-b"><td className="p-3 font-medium">Memory</td><td className="p-3">16GB UDIMM, 3200MT/s, ECC</td></tr>
-                  <tr className="border-b"><td className="p-3 font-medium">Hard Disk</td><td className="p-3">2 x 2TB Hard Drive SATA 6G 7.2K 3.5in Cabled</td></tr>
-                  <tr className="border-b"><td className="p-3 font-medium">RAID Controller</td><td className="p-3">PERC H355 Adapter FH (RAID levels 0, 1, 10)</td></tr>
-                  <tr className="border-b"><td className="p-3 font-medium">Operating System</td><td className="p-3">Without Operating System</td></tr>
-                  <tr className="border-b"><td className="p-3 font-medium">Chasis</td><td className="p-3">3.5" Chassis with up to 4 Hard Drives (SAS/SATA)</td></tr>
-                  <tr className="border-b"><td className="p-3 font-medium">Network</td><td className="p-3">On-Board Broadcom 5720 Dual Port 1Gb LOM</td></tr>
-                  <tr><td className="p-3 font-medium">Embedded System Management</td><td className="p-3">iDRAC9, Basic 15G</td></tr>
-                </tbody>
-              </table>
+            <div className=" ">
+
+              <div className=" bg-white p-4 min-h-[20vh]  mx-auto">
+
+                <h1 className='text-[18px] text-[#3749bb] text-center font-semibold'>Related Product</h1>
+
+                <div className='border-t border-[#80808056] w-[90%] mx-auto my-2 '></div>
+
+                <div className="flex gap-x-4">
+                  <Image src={"https://res.cloudinary.com/dfng3w9jm/image/upload/v1746174908/ryzen-5-8500g-desktop-pc-00010-500x500_i012da.webp"} height={1000} width={1000} alt='image not found' className='w-[100px]' />
+
+
+                  <div className=" flex-col flex">
+                    <h1 className='text-[#000]'>
+                      AMD Ryzen 5 2400G Desktop PC</h1>
+                    <div className="flex gap-x-2 mt-1.5 items-center">
+                      <h1 className="text-red-500  flex items-center gap-1">
+                        65464 <span className="font-extrabold">৳</span>
+                      </h1>
+                      <span className="text-gray-500 line-through text-sm flex items-center gap-1">
+                        546465 <span className="font-extrabold">৳</span>
+                      </span>
+                    </div>
+                    <div className="flex items-center mt-1.5 gap-x-1">
+                      <IoMdGitCompare />
+                      <span className='text-sm text-gray-500'>Add to Compare</span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div className='border-t border-[#80808056] w-[90%] mx-auto my-3 '></div>
+
+                <div className="flex gap-x-4">
+                  <Image src={"https://res.cloudinary.com/dfng3w9jm/image/upload/v1746174908/ryzen-5-8500g-desktop-pc-00010-500x500_i012da.webp"} height={1000} width={1000} alt='image not found' className='w-[100px]' />
+
+
+                  <div className=" flex-col flex">
+                    <h1 className='text-[#000]'>
+                      AMD Ryzen 5 2400G Desktop PC</h1>
+                    <div className="flex gap-x-2 mt-1.5 items-center">
+                      <h1 className="text-red-500  flex items-center gap-1">
+                        65464 <span className="font-extrabold">৳</span>
+                      </h1>
+                      <span className="text-gray-500 line-through text-sm flex items-center gap-1">
+                        546465 <span className="font-extrabold">৳</span>
+                      </span>
+                    </div>
+                    <div className="flex items-center mt-1.5 gap-x-1">
+                      <IoMdGitCompare />
+                      <span className='text-sm text-gray-500'>Add to Compare</span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div className=" bg-white p-4 min-h-[20vh]  mx-auto mt-5">
+
+                <h1 className='text-[18px] text-[#3749bb] text-center font-semibold'>Recently Viewed</h1>
+
+
+
+                <div className='border-t border-[#80808056] w-[90%] mx-auto my-3 '></div>
+
+                <div className="flex gap-x-4">
+                  <Image src={"https://res.cloudinary.com/dfng3w9jm/image/upload/v1746174908/ryzen-5-8500g-desktop-pc-00010-500x500_i012da.webp"} height={1000} width={1000} alt='image not found' className='w-[100px]' />
+
+
+                  <div className=" flex-col flex">
+                    <h1 className='text-[#000]'>
+                      AMD Ryzen 5 2400G Desktop PC</h1>
+                    <div className="flex gap-x-2 mt-1.5 items-center">
+                      <h1 className="text-red-500  flex items-center gap-1">
+                        65464 <span className="font-extrabold">৳</span>
+                      </h1>
+                      <span className="text-gray-500 line-through text-sm flex items-center gap-1">
+                        546465 <span className="font-extrabold">৳</span>
+                      </span>
+                    </div>
+                    <div className="flex items-center mt-1.5 gap-x-1">
+                      <IoMdGitCompare />
+                      <span className='text-sm text-gray-500'>Add to Compare</span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
             </div>
 
-            <div className="mb-6">
-              <h3 className="text-lg font-semibold bg-blue-100 px-4 py-2 rounded-t text-blue-800">Additional Features</h3>
-              <table className="w-full text-sm text-left text-gray-700 border border-gray-200">
-                <tbody>
-                  <tr className="border-b"><td className="p-3 font-medium">Optical Drive</td><td className="p-3">DVD+/-RW, SATA, Internal</td></tr>
-                  <tr><td className="p-3 font-medium">Power Supply</td><td className="p-3">Power Cords Power Cord: C13, 2M, 250V, 10A (UK, Malaysia, Singapore, HK, Brunei, DDD)</td></tr>
-                </tbody>
-              </table>
-            </div>
 
-
-            <div>
-              <h3 className="text-lg font-semibold bg-blue-100 px-4 py-2 rounded-t text-blue-800">Manufacture Warranty</h3>
-              <table className="w-full text-sm text-left text-gray-700 border border-gray-200">
-                <tbody>
-                  <tr><td className="p-3 font-medium">Warranty</td><td className="p-3">03 years warranty</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div className=""></div>
 
           </div>
-
-
-
-
-
-
-
-
         </div>
-
       </div>
       <BottomNav />
       <Footer />
