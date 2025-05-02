@@ -30,11 +30,11 @@ const Page = (props: Props) => {
 
 
           <div>
-            < Image src={`${product?.image}`} height={1000} width={1000} alt='img not found'/>
+            < Image src={`${product?.image}`} height={1000} width={1000} alt='img not found' />
             <div className="grid grid-cols-3 gap-4 mt-4">
-              {/* <img src="/thumb1.jpg" className="rounded shadow" />
-          <img src="/thumb2.jpg" className="rounded shadow" />
-          <img src="/thumb3.jpg" className="rounded shadow" /> */}
+              <img src={`${product?.image}`} className="rounded shadow" />
+              <img src={`${product?.image}`} className="rounded shadow" />
+              <img src={`${product?.image}`} className="rounded shadow" />
             </div>
           </div>
 
@@ -71,7 +71,7 @@ const Page = (props: Props) => {
                   </div>
                 </label>
                 <label className="flex items-center gap-3 border p-3 rounded-md cursor-pointer w-full">
-                  <input type="radio" name="payment"  />
+                  <input type="radio" name="payment" />
                   <div>
                     <p className="font-bold">৳ 20,833/month</p>
                     <p className="text-xs text-gray-500">0% EMI for 12 months</p>
@@ -95,64 +95,64 @@ const Page = (props: Props) => {
 
 
         <div className="bg-white p-6 rounded-lg shadow-md">
-  {/* Tabs */}
-  <div className="flex space-x-4 border-b pb-3 mb-6">
-  <button className={`px-4 py-1 rounded font-semibold ${active === 0 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer`} onClick={() => setactive(0)}>
-    Specification
-  </button>
-  <button className={`px-4 py-1 rounded font-semibold ${active === 1 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer`} onClick={() => setactive(1)}>
-    Description
-  </button>
-  <button className={`px-4 py-1 rounded font-semibold ${active === 2 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer`} onClick={() => setactive(2)}>
-    Questions (0)
-  </button>
-  <button className={`px-4 py-1 rounded font-semibold ${active === 3 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer hidden md:block`} onClick={() => setactive(3)}>
-    Reviews (0)
-  </button>
-</div>
+
+          <div className="flex space-x-4 border-b pb-3 mb-6">
+            <button className={`px-4 py-1 rounded font-semibold ${active === 0 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer`} onClick={() => setactive(0)}>
+              Specification
+            </button>
+            <button className={`px-4 py-1 rounded font-semibold ${active === 1 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer`} onClick={() => setactive(1)}>
+              Description
+            </button>
+            <button className={`px-4 py-1 rounded font-semibold ${active === 2 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer`} onClick={() => setactive(2)}>
+              Questions (0)
+            </button>
+            <button className={`px-4 py-1 rounded font-semibold ${active === 3 ? "bg-red-600 text-white" : "text-gray-600 hover:text-red-600"} cursor-pointer hidden md:block`} onClick={() => setactive(3)}>
+              Reviews (0)
+            </button>
+          </div>
 
 
-  {/* Specification Title */}
-  <h2 className="text-2xl font-semibold text-gray-800 mb-4">Specification</h2>
 
-  {/* Basic Information */}
-  <div className="mb-6">
-    <h3 className="text-lg font-semibold bg-blue-100 px-4 py-2 rounded-t text-blue-800">Basic Information</h3>
-    <table className="w-full text-sm text-left text-gray-700 border border-gray-200">
-      <tbody>
-        <tr className="border-b"><td className="p-3 font-medium">Processor</td><td className="p-3">Intel Xeon E-2334 3.4GHz, 8M Cache, 4C/8T, Turbo (65W), 3200 MT/s</td></tr>
-        <tr className="border-b"><td className="p-3 font-medium">Memory</td><td className="p-3">16GB UDIMM, 3200MT/s, ECC</td></tr>
-        <tr className="border-b"><td className="p-3 font-medium">Hard Disk</td><td className="p-3">2 x 2TB Hard Drive SATA 6G 7.2K 3.5in Cabled</td></tr>
-        <tr className="border-b"><td className="p-3 font-medium">RAID Controller</td><td className="p-3">PERC H355 Adapter FH (RAID levels 0, 1, 10)</td></tr>
-        <tr className="border-b"><td className="p-3 font-medium">Operating System</td><td className="p-3">Without Operating System</td></tr>
-        <tr className="border-b"><td className="p-3 font-medium">Chasis</td><td className="p-3">3.5" Chassis with up to 4 Hard Drives (SAS/SATA)</td></tr>
-        <tr className="border-b"><td className="p-3 font-medium">Network</td><td className="p-3">On-Board Broadcom 5720 Dual Port 1Gb LOM</td></tr>
-        <tr><td className="p-3 font-medium">Embedded System Management</td><td className="p-3">iDRAC9, Basic 15G</td></tr>
-      </tbody>
-    </table>
-  </div>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Specification</h2>
 
-  {/* Additional Features */}
-  <div className="mb-6">
-    <h3 className="text-lg font-semibold bg-blue-100 px-4 py-2 rounded-t text-blue-800">Additional Features</h3>
-    <table className="w-full text-sm text-left text-gray-700 border border-gray-200">
-      <tbody>
-        <tr className="border-b"><td className="p-3 font-medium">Optical Drive</td><td className="p-3">DVD+/-RW, SATA, Internal</td></tr>
-        <tr><td className="p-3 font-medium">Power Supply</td><td className="p-3">Power Cords Power Cord: C13, 2M, 250V, 10A (UK, Malaysia, Singapore, HK, Brunei, DDD)</td></tr>
-      </tbody>
-    </table>
-  </div>
 
-  {/* Warranty */}
-  <div>
-    <h3 className="text-lg font-semibold bg-blue-100 px-4 py-2 rounded-t text-blue-800">Manufacture Warranty</h3>
-    <table className="w-full text-sm text-left text-gray-700 border border-gray-200">
-      <tbody>
-        <tr><td className="p-3 font-medium">Warranty</td><td className="p-3">03 years warranty</td></tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+          <div className="mb-6">
+            <h3 className="text-lg font-semibold bg-blue-100 px-4 py-2 rounded-t text-blue-800">Basic Information</h3>
+            <table className="w-full text-sm text-left text-gray-700 border border-gray-200">
+              <tbody>
+                <tr className="border-b"><td className="p-3 font-medium">Processor</td><td className="p-3">Intel Xeon E-2334 3.4GHz, 8M Cache, 4C/8T, Turbo (65W), 3200 MT/s</td></tr>
+                <tr className="border-b"><td className="p-3 font-medium">Memory</td><td className="p-3">16GB UDIMM, 3200MT/s, ECC</td></tr>
+                <tr className="border-b"><td className="p-3 font-medium">Hard Disk</td><td className="p-3">2 x 2TB Hard Drive SATA 6G 7.2K 3.5in Cabled</td></tr>
+                <tr className="border-b"><td className="p-3 font-medium">RAID Controller</td><td className="p-3">PERC H355 Adapter FH (RAID levels 0, 1, 10)</td></tr>
+                <tr className="border-b"><td className="p-3 font-medium">Operating System</td><td className="p-3">Without Operating System</td></tr>
+                <tr className="border-b"><td className="p-3 font-medium">Chasis</td><td className="p-3">3.5" Chassis with up to 4 Hard Drives (SAS/SATA)</td></tr>
+                <tr className="border-b"><td className="p-3 font-medium">Network</td><td className="p-3">On-Board Broadcom 5720 Dual Port 1Gb LOM</td></tr>
+                <tr><td className="p-3 font-medium">Embedded System Management</td><td className="p-3">iDRAC9, Basic 15G</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+
+          <div className="mb-6">
+            <h3 className="text-lg font-semibold bg-blue-100 px-4 py-2 rounded-t text-blue-800">Additional Features</h3>
+            <table className="w-full text-sm text-left text-gray-700 border border-gray-200">
+              <tbody>
+                <tr className="border-b"><td className="p-3 font-medium">Optical Drive</td><td className="p-3">DVD+/-RW, SATA, Internal</td></tr>
+                <tr><td className="p-3 font-medium">Power Supply</td><td className="p-3">Power Cords Power Cord: C13, 2M, 250V, 10A (UK, Malaysia, Singapore, HK, Brunei, DDD)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+
+          <div>
+            <h3 className="text-lg font-semibold bg-blue-100 px-4 py-2 rounded-t text-blue-800">Manufacture Warranty</h3>
+            <table className="w-full text-sm text-left text-gray-700 border border-gray-200">
+              <tbody>
+                <tr><td className="p-3 font-medium">Warranty</td><td className="p-3">03 years warranty</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
       </div>
       <Footer />

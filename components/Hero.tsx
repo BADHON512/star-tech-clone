@@ -9,7 +9,7 @@ type Props = {}
 
 const Hero = (props: Props) => {
   return (
-    <div className="mt-8 max-w-[1297px] mx-auto px-4">
+    <div className="mt-18 1300:mt-10 max-w-[1297px] mx-auto px-4">
       <div className="flex flex-col lg:flex-row gap-7">
         {/* Left Banner Image */}
         <img
